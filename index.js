@@ -10,7 +10,9 @@ const URL = "mongodb+srv://gobinathm:Welcome123@cluster0.7qig0.mongodb.net";
 
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "*"
+}))
 
 let authenticate = function (req, res, next) {
     try{
